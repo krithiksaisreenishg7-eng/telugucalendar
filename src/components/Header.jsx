@@ -16,7 +16,7 @@ export default function Header({ currentLanguage, onLanguageChange }) {
   const currentLang = LANGUAGES.find(lang => lang.code === currentLanguage) || LANGUAGES[0];
 
   return (
-    <header className="animate-fade-in">
+    <header className="animate-fade-in relative z-50">
       <div className="glass-morphism rounded-2xl p-6 shadow-2xl">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           {/* Title Section */}
@@ -35,7 +35,7 @@ export default function Header({ currentLanguage, onLanguageChange }) {
           </div>
 
           {/* Language Selector */}
-          <div className="relative">
+          <div className="relative z-[100]">
             <button
               onClick={() => setIsLanguageOpen(!isLanguageOpen)}
               className="flex items-center gap-3 px-4 py-3 bg-white/80 hover:bg-white rounded-xl border border-gray-200 transition-all duration-200 hover:shadow-md min-w-[160px]"
@@ -48,7 +48,7 @@ export default function Header({ currentLanguage, onLanguageChange }) {
             </button>
 
             {isLanguageOpen && (
-              <div className="absolute right-0 mt-2 w-full bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden z-50 animate-slide-up">
+              <div className="absolute right-0 mt-2 w-full bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden z-[101] animate-slide-up">
                 {LANGUAGES.map((lang) => (
                   <button
                     key={lang.code}

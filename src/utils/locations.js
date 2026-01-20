@@ -37,12 +37,59 @@ export const LOCATIONS = [
   { id: 'rameswaram', name: 'Rameswaram', state: 'Tamil Nadu', country: 'India', lat: 9.2876, lng: 79.3129, timezone: 'Asia/Kolkata' },
   { id: 'amritsar', name: 'Amritsar', state: 'Punjab', country: 'India', lat: 31.6340, lng: 74.8723, timezone: 'Asia/Kolkata' },
 
-  // International (for diaspora)
-  { id: 'new-york', name: 'New York', country: 'USA', lat: 40.7128, lng: -74.0060, timezone: 'America/New_York' },
+  // International - USA
+  { id: 'new-york', name: 'New York', state: 'NY', country: 'USA', lat: 40.7128, lng: -74.0060, timezone: 'America/New_York' },
+  { id: 'los-angeles', name: 'Los Angeles', state: 'CA', country: 'USA', lat: 34.0522, lng: -118.2437, timezone: 'America/Los_Angeles' },
+  { id: 'chicago', name: 'Chicago', state: 'IL', country: 'USA', lat: 41.8781, lng: -87.6298, timezone: 'America/Chicago' },
+  { id: 'san-francisco', name: 'San Francisco', state: 'CA', country: 'USA', lat: 37.7749, lng: -122.4194, timezone: 'America/Los_Angeles' },
+  { id: 'houston', name: 'Houston', state: 'TX', country: 'USA', lat: 29.7604, lng: -95.3698, timezone: 'America/Chicago' },
+  { id: 'seattle', name: 'Seattle', state: 'WA', country: 'USA', lat: 47.6062, lng: -122.3321, timezone: 'America/Los_Angeles' },
+  { id: 'boston', name: 'Boston', state: 'MA', country: 'USA', lat: 42.3601, lng: -71.0589, timezone: 'America/New_York' },
+  { id: 'atlanta', name: 'Atlanta', state: 'GA', country: 'USA', lat: 33.7490, lng: -84.3880, timezone: 'America/New_York' },
+  { id: 'dallas', name: 'Dallas', state: 'TX', country: 'USA', lat: 32.7767, lng: -96.7970, timezone: 'America/Chicago' },
+
+  // International - Canada
+  { id: 'toronto', name: 'Toronto', state: 'ON', country: 'Canada', lat: 43.6532, lng: -79.3832, timezone: 'America/Toronto' },
+  { id: 'vancouver', name: 'Vancouver', state: 'BC', country: 'Canada', lat: 49.2827, lng: -123.1207, timezone: 'America/Vancouver' },
+  { id: 'montreal', name: 'Montreal', state: 'QC', country: 'Canada', lat: 45.5017, lng: -73.5673, timezone: 'America/Montreal' },
+
+  // International - UK & Europe
   { id: 'london', name: 'London', country: 'UK', lat: 51.5074, lng: -0.1278, timezone: 'Europe/London' },
+  { id: 'manchester', name: 'Manchester', country: 'UK', lat: 53.4808, lng: -2.2426, timezone: 'Europe/London' },
+  { id: 'birmingham', name: 'Birmingham', country: 'UK', lat: 52.4862, lng: -1.8904, timezone: 'Europe/London' },
+  { id: 'paris', name: 'Paris', country: 'France', lat: 48.8566, lng: 2.3522, timezone: 'Europe/Paris' },
+  { id: 'berlin', name: 'Berlin', country: 'Germany', lat: 52.5200, lng: 13.4050, timezone: 'Europe/Berlin' },
+  { id: 'amsterdam', name: 'Amsterdam', country: 'Netherlands', lat: 52.3676, lng: 4.9041, timezone: 'Europe/Amsterdam' },
+  { id: 'zurich', name: 'Zurich', country: 'Switzerland', lat: 47.3769, lng: 8.5417, timezone: 'Europe/Zurich' },
+
+  // International - Middle East
   { id: 'dubai', name: 'Dubai', country: 'UAE', lat: 25.2048, lng: 55.2708, timezone: 'Asia/Dubai' },
+  { id: 'abu-dhabi', name: 'Abu Dhabi', country: 'UAE', lat: 24.4539, lng: 54.3773, timezone: 'Asia/Dubai' },
+  { id: 'doha', name: 'Doha', country: 'Qatar', lat: 25.2854, lng: 51.5310, timezone: 'Asia/Qatar' },
+  { id: 'riyadh', name: 'Riyadh', country: 'Saudi Arabia', lat: 24.7136, lng: 46.6753, timezone: 'Asia/Riyadh' },
+  { id: 'muscat', name: 'Muscat', country: 'Oman', lat: 23.5880, lng: 58.3829, timezone: 'Asia/Muscat' },
+
+  // International - Asia Pacific
   { id: 'singapore', name: 'Singapore', country: 'Singapore', lat: 1.3521, lng: 103.8198, timezone: 'Asia/Singapore' },
-  { id: 'sydney', name: 'Sydney', country: 'Australia', lat: -33.8688, lng: 151.2093, timezone: 'Australia/Sydney' },
+  { id: 'hong-kong', name: 'Hong Kong', country: 'Hong Kong', lat: 22.3193, lng: 114.1694, timezone: 'Asia/Hong_Kong' },
+  { id: 'tokyo', name: 'Tokyo', country: 'Japan', lat: 35.6762, lng: 139.6503, timezone: 'Asia/Tokyo' },
+  { id: 'bangkok', name: 'Bangkok', country: 'Thailand', lat: 13.7563, lng: 100.5018, timezone: 'Asia/Bangkok' },
+  { id: 'kuala-lumpur', name: 'Kuala Lumpur', country: 'Malaysia', lat: 3.1390, lng: 101.6869, timezone: 'Asia/Kuala_Lumpur' },
+  { id: 'jakarta', name: 'Jakarta', country: 'Indonesia', lat: -6.2088, lng: 106.8456, timezone: 'Asia/Jakarta' },
+  { id: 'manila', name: 'Manila', country: 'Philippines', lat: 14.5995, lng: 120.9842, timezone: 'Asia/Manila' },
+
+  // International - Australia & NZ
+  { id: 'sydney', name: 'Sydney', state: 'NSW', country: 'Australia', lat: -33.8688, lng: 151.2093, timezone: 'Australia/Sydney' },
+  { id: 'melbourne', name: 'Melbourne', state: 'VIC', country: 'Australia', lat: -37.8136, lng: 144.9631, timezone: 'Australia/Melbourne' },
+  { id: 'brisbane', name: 'Brisbane', state: 'QLD', country: 'Australia', lat: -27.4698, lng: 153.0251, timezone: 'Australia/Brisbane' },
+  { id: 'perth', name: 'Perth', state: 'WA', country: 'Australia', lat: -31.9505, lng: 115.8605, timezone: 'Australia/Perth' },
+  { id: 'auckland', name: 'Auckland', country: 'New Zealand', lat: -36.8485, lng: 174.7633, timezone: 'Pacific/Auckland' },
+
+  // South Asia
+  { id: 'kathmandu', name: 'Kathmandu', country: 'Nepal', lat: 27.7172, lng: 85.3240, timezone: 'Asia/Kathmandu' },
+  { id: 'colombo', name: 'Colombo', country: 'Sri Lanka', lat: 6.9271, lng: 79.8612, timezone: 'Asia/Colombo' },
+  { id: 'dhaka', name: 'Dhaka', country: 'Bangladesh', lat: 23.8103, lng: 90.4125, timezone: 'Asia/Dhaka' },
+  { id: 'karachi', name: 'Karachi', country: 'Pakistan', lat: 24.8607, lng: 67.0011, timezone: 'Asia/Karachi' },
 ];
 
 // Get location by ID
