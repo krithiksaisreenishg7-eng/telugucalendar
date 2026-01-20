@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Globe2, X } from 'lucide-react';
 import Header from './components/Header';
 import LocationSelector from './components/LocationSelector';
 import DateSelector from './components/DateSelector';
 import PanchangDisplay from './components/PanchangDisplay';
 import TimingsDisplay from './components/TimingsDisplay';
+import InteractiveGlobe from './components/InteractiveGlobe';
 import { getPanchang } from './utils/hinduCalendar';
 import { LOCATIONS } from './utils/locations';
 
@@ -14,6 +16,7 @@ function App() {
   const [selectedLocation, setSelectedLocation] = useState(LOCATIONS[0]); // Default: Hyderabad
   const [panchangData, setPanchangData] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [showGlobe, setShowGlobe] = useState(false);
 
   // Calculate panchang when date or location changes
   useEffect(() => {
@@ -99,6 +102,45 @@ function App() {
           </div>
         </footer>
       </div>
+
+      {/* Floating Globe Button */}
+      <button
+        onClick={() => setShowGlobe(true)}
+        className="fixed bottom-8 right-8 w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform z-40 group"
+        title="Open Interactive Globe"
+      >
+        <Globe2 className="w-8 h-8 text-white group-hover:animate-spin" style={{ animationDuration: '3s' }} />
+      </button>
+
+      {/* Globe Modal */}
+      {showGlobe && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[999] flex items-center justify-center p-4 animate-fade-in">
+          <div className="w-full max-w-6xl">
+            {/* Close Button */}
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-3xl font-bold text-white flex items-center gap-3">
+                <Globe2 className="w-8 h-8" />
+                Interactive Globe - Select Your Location
+              </h2>
+              <button
+                onClick={() => setShowGlobe(false)}
+                className="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors"
+              >
+                <X className="w-6 h-6 text-white" />
+              </button>
+            </div>
+
+            {/* Globe */}
+            <InteractiveGlobe
+              selectedLocation={selectedLocation}
+              onLocationSelect={(location) => {
+                handleLocationChange(location);
+                setTimeout(() => setShowGlobe(false), 1500); // Close after selection
+              }}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
