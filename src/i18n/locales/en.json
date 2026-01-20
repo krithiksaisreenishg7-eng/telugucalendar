@@ -1,0 +1,76 @@
+{
+  "app": {
+    "title": "Hindu Calendar",
+    "subtitle": "Panchang & Auspicious Timings"
+  },
+  "location": {
+    "select": "Select Location",
+    "placeholder": "Search city or location...",
+    "timezone": "Timezone",
+    "coordinates": "Coordinates",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "currentLocation": "Use Current Location"
+  },
+  "date": {
+    "today": "Today",
+    "selectDate": "Select Date",
+    "month": "Month",
+    "year": "Year"
+  },
+  "panchang": {
+    "title": "Panchang",
+    "tithi": "Tithi",
+    "nakshatra": "Nakshatra",
+    "yoga": "Yoga",
+    "karana": "Karana",
+    "paksha": "Paksha",
+    "shukla": "Shukla Paksha",
+    "krishna": "Krishna Paksha",
+    "rashi": "Rashi",
+    "sunrise": "Sunrise",
+    "sunset": "Sunset",
+    "moonrise": "Moonrise",
+    "moonset": "Moonset"
+  },
+  "timings": {
+    "auspicious": "Auspicious Timings",
+    "inauspicious": "Inauspicious Timings",
+    "rahuKalam": "Rahu Kalam",
+    "yamagandam": "Yama Gandam",
+    "gulika": "Gulika Kalam",
+    "abhijit": "Abhijit Muhurat",
+    "amritKaal": "Amrit Kaal",
+    "durmuhurtam": "Durmuhurtam",
+    "varjyam": "Varjyam",
+    "goodFor": "Good for important activities",
+    "avoid": "Avoid important activities",
+    "description": {
+      "rahuKalam": "Inauspicious period ruled by Rahu. Avoid new beginnings.",
+      "yamagandam": "Inauspicious period ruled by Yama. Not suitable for important work.",
+      "gulika": "Inauspicious period ruled by Saturn's son. Avoid auspicious activities.",
+      "abhijit": "Most auspicious period. Excellent for all important activities.",
+      "amritKaal": "Nectar period. Highly auspicious for spiritual and material activities.",
+      "durmuhurtam": "Inauspicious period. Avoid starting new ventures."
+    }
+  },
+  "festivals": {
+    "title": "Festivals & Events",
+    "today": "Today's Festivals"
+  },
+  "language": {
+    "select": "Language",
+    "en": "English",
+    "te": "తెలుగు (Telugu)",
+    "hi": "हिंदी (Hindi)",
+    "ta": "தமிழ் (Tamil)"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "refresh": "Refresh",
+    "close": "Close",
+    "open": "Open",
+    "search": "Search"
+  }
+}
